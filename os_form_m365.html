@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Nova Ordem de Serviço | M365 Integration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilo para simular o embed do Forms */
+        .forms-embed {
+            min-height: 500px;
+            background-color: #e8e8e8; /* Cor de fundo que simula um elemento externo */
+            border: 1px solid #c8c6c4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-style: italic;
+            color: #605e5c;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🏠 Portal Principal</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="analista_login.html">Login do Analista</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="mb-4">1. Formulário de Abertura de Ordem de Serviço</h2>
+        
+        <div class="card p-4">
+            <p class="lead text-muted">Preencha os dados abaixo com o máximo de detalhes. O envio criará automaticamente uma nova Ordem de Serviço em nosso sistema.</p>
+            
+            <div class="forms-embed mb-4">
+                <i class="bi bi-ui-checks portal-icon" style="font-size: 4rem;"></i>
+                <p>Aqui é onde o **Microsoft Forms** (ou Power App) real seria incorporado através de um iframe ou link direto.</p>
+                <p class="small text-dark">Os dados enviados são imediatamente processados pelo **Power Automate**.</p>
+            </div>
+
+            <h4 class="mt-4">Fluxo de Dados:</h4>
+            <p class="text-success fw-bold">
+                Forms (Coleta) $\rightarrow$ Power Automate (Automação) $\rightarrow$ SharePoint List (Banco de Dados)
+            </p>
+            
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</body>
+</html>

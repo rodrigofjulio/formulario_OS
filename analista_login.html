@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Analista | OS System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .login-container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg-light); /* Fundo cinza claro */
+        }
+        .login-card {
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        .ms-logo {
+            color: var(--ms-blue);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="card login-card">
+            <div class="text-center">
+                <i class="ms-logo bi bi-microsoft"></i> <h4 class="mb-4">Acesso ao Dashboard do Analista</h4>
+            </div>
+            
+            <form action="#" method="POST">
+                <div class="mb-3">
+                    <label for="username" class="form-label">E-mail Corporativo</label>
+                    <input type="email" class="form-control" id="username" placeholder="seu.analista@empresa.com.br" required>
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                
+                <a href="analista_dashboard.html" class="btn btn-primary w-100 mb-3">Entrar (Simulação)</a>
+            </form>
+
+            <p class="text-center text-muted small mt-3">
+                * Em um ambiente real do M365 (Power Apps), esta tela seria substituída pela autenticação automática do Microsoft Entra ID.
+            </p>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

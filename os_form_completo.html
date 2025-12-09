@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Completo de Ordem de Serviço</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🏠 Portal Principal</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="analista_login.html">Login do Analista</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="card p-4">
+            <h2 class="card-title mb-4"><i class="bi bi-tools me-2"></i> Criar Nova Ordem de Serviço</h2>
+            <p class="lead text-muted">Por favor, preencha todos os campos com a maior clareza possível para agilizar o atendimento.</p>
+            
+            <hr>
+
+            <form id="osForm" action="#" method="POST">
+                
+                <h4 class="mt-4 mb-3 text-primary">Detalhes Principais</h4>
+                
+                <div class="row">
+                    <div class="col-md-8 mb-3">
+                        <label for="titulo" class="form-label fw-bold">Título Resumido da OS <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="titulo" name="titulo" required placeholder="Ex: Falha na impressora do setor financeiro">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="prioridade" class="form-label fw-bold">Prioridade Sugerida <span class="text-danger">*</span></label>
+                        <select id="prioridade" name="prioridade" class="form-select" required>
+                            <option value="">Selecione</option>
+                            <option value="baixa">Baixa</option>
+                            <option value="media" selected>Média</option>
+                            <option value="alta">Alta</option>
+                            <option value="critica">Crítica (Interrompendo Produção)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="descricao" class="form-label fw-bold">Descrição Detalhada do Problema/Serviço <span class="text-danger">*</span></label>
+                    <textarea class="form-control" id="descricao" name="descricao" rows="5" required placeholder="Descreva o que aconteceu, quando começou e se alguma solução temporária foi tentada."></textarea>
+                </div>
+
+                <h4 class="mt-4 mb-3 text-primary">Informações de Contato</h4>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="solicitante" class="form-label fw-bold">Nome Completo do Solicitante <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="solicitante" name="solicitante" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label fw-bold">E-mail para Confirmação <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="email" name="email" required placeholder="exemplo@empresa.com.br">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="tipo_servico" class="form-label fw-bold">Tipo de Serviço <span class="text-danger">*</span></label>
+                        <select id="tipo_servico" name="tipo_servico" class="form-select" required>
+                            <option value="">Selecione o Tipo</option>
+                            <option value="reparo">Reparo / Correção</option>
+                            <option value="manutencao">Manutenção Preventiva</option>
+                            <option value="instalacao">Instalação / Configuração</option>
+                            <option value="suporte">Suporte Geral</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="localizacao" class="form-label fw-bold">Localização/Setor</label>
+                        <input type="text" class="form-control" id="localizacao" name="localizacao" placeholder="Ex: Prédio A, 3º Andar, Sala 301">
+                    </div>
+                </div>
+
+                <h4 class="mt-4 mb-3 text-primary">Datas e Anexos</h4>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="data_limite" class="form-label fw-bold">Data Desejada para Atendimento</label>
+                        <input type="date" class="form-control" id="data_limite" name="data_limite">
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <label for="anexos" class="form-label fw-bold">Anexar Arquivos (Opcional)</label>
+                        <input type="file" class="form-control" id="anexos" name="anexos" multiple>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="bi bi-send me-2"></i> Enviar e Abrir Ordem de Serviço
+                    </button>
+                </div>
+            </form>
+            
+            <p class="mt-4 text-muted small text-center">
+                * Para a funcionalidade completa (salvamento de dados), este formulário precisaria de integração com um backend (como Power Automate + SharePoint, ou JavaScript + Supabase).
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Nova Ordem de Serviço</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>📋 Nova Ordem de Serviço</h1>
+        <nav>
+            <a href="os_dashboard.html">Ver OS Abertas</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Detalhes da Solicitação</h2>
+            <form action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="titulo">Título da OS (Resumo)</label>
+                    <input type="text" id="titulo" name="titulo" required placeholder="Ex: Manutenção preventiva do Servidor 01">
+                </div>
+
+                <div class="form-group">
+                    <label for="solicitante">Nome do Solicitante</label>
+                    <input type="text" id="solicitante" name="solicitante" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail de Contato</label>
+                    <input type="email" id="email" name="email" required placeholder="seu.email@empresa.com.br">
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo_servico">Tipo de Serviço</label>
+                    <select id="tipo_servico" name="tipo_servico" required>
+                        <option value="">Selecione o Tipo</option>
+                        <option value="reparo">Reparo / Correção</option>
+                        <option value="manutencao">Manutenção Preventiva</option>
+                        <option value="instalacao">Instalação / Configuração</option>
+                        <option value="suporte">Suporte Geral</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="prioridade">Prioridade</label>
+                    <select id="prioridade" name="prioridade" required>
+                        <option value="baixa">Baixa</option>
+                        <option value="media" selected>Média</option>
+                        <option value="alta">Alta</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao">Descrição Detalhada do Problema/Serviço</label>
+                    <textarea id="descricao" name="descricao" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="data_limite">Data Desejada para Conclusão</label>
+                    <input type="date" id="data_limite" name="data_limite">
+                </div>
+
+                <button type="submit" class="btn-primary">Enviar Ordem de Serviço</button>
+            </form>
+            
+            <p style="margin-top: 20px; font-style: italic; font-size: 0.9em;">
+                * Em um ambiente real da Microsoft, este formulário seria um **Microsoft Forms** embutido ou um **Power App**, e o envio acionaria um fluxo do **Power Automate** para salvar os dados no SharePoint.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

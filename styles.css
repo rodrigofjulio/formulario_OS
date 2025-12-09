@@ -1,0 +1,193 @@
+/* Importação de fonte similar ao padrão MS */
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap');
+
+:root {
+    --ms-blue: #0078d4;
+    --ms-dark-blue: #005a9e;
+    --bg-light: #f3f2f1;
+    --text-dark: #323130;
+    --border-light: #c8c6c4;
+    --success-green: #107c10;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--ms-blue);
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--ms-dark-blue);
+}
+
+/* --- Container e Cards --- */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilo de Formulário --- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-light);
+    border-radius: 2px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--ms-blue);
+    box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.2);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* --- Botão --- */
+.btn-primary {
+    background-color: var(--ms-blue);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--ms-dark-blue);
+}
+
+/* --- Estilo de Tabela (Dashboard) --- */
+.table-container {
+    overflow-x: auto;
+}
+
+.os-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.os-table th, .os-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.os-table th {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    font-weight: 600;
+    border-top: 1px solid var(--border-light);
+}
+
+.os-table tr:hover {
+    background-color: #e8e8e8;
+}
+
+/* Status Badges */
+.status {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.status-pendente {
+    background-color: #ffb900; /* Amarelo */
+    color: var(--text-dark);
+}
+
+.status-em-andamento {
+    background-color: var(--ms-blue);
+    color: white;
+}
+
+.status-concluido {
+    background-color: var(--success-green);
+    color: white;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    header h1 {
+        margin-bottom: 10px;
+    }
+    nav a {
+        margin: 0 10px;
+    }
+    .container {
+        margin: 20px auto;
+    }
+    .card {
+        padding: 20px;
+    }
+}

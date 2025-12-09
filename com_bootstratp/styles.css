@@ -1,0 +1,48 @@
+:root {
+    --ms-blue: #0078d4;
+    --ms-dark-blue: #005a9e;
+    --bg-light: #f3f2f1;
+}
+
+/* Opcional: Para usar a cor MS como primária do Bootstrap */
+.bg-primary, .btn-primary {
+    background-color: var(--ms-blue) !important;
+    border-color: var(--ms-blue) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--ms-dark-blue) !important;
+    border-color: var(--ms-dark-blue) !important;
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Mantendo a fonte MS */
+}
+
+/* Header/Navbar Customizado */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Card mais proeminente */
+.card {
+    border: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Status Badges com cores customizadas do MS */
+.badge-pendente {
+    background-color: #ffb900; /* Amarelo MS */
+    color: #323130;
+}
+
+.badge-em-andamento {
+    background-color: var(--ms-blue);
+    color: white;
+}
+
+.badge-concluido {
+    background-color: #107c10; /* Verde MS */
+    color: white;
+}
